@@ -1,0 +1,7 @@
+[package]
+name = "qnap_fwdec"
+version = "0.1.0"
+authors = ["Hugo Grostabussiat <bonstra@bonstra.fr.eu.org>"]
+
+[dependencies]
+getopts = "0.2"
