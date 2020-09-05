@@ -1,0 +1,21 @@
+== QNAP Firmware encryption/decryption tool ==
+
+This small tool can encrypt and decrypt official firmware images for QNAP NAS,
+provided you know the key. It is a free software implementation of the same
+algorithm used in the official "PC1" tool present in QNAP NAS firmwares (at
+least the TS-x31 series).
+
+Official firmware images downloadable from the QNAP website are partially
+encrypted using what appears to be a custom symmetric cipher.
+
+Metadata is appended to the bottom of the encrypted image to indicate the
+length of the encrypted part as well as details about the product model the
+firmware image targets and version information.
+
+The key is a sequence of ASCII characters. Key length must be even, otherwise
+the last byte is ignored. Extended ASCII (> 127) characters should not be used
+as they are sign-extended when - I believe - they shouldn't.
+
+The key used for official firmwares is not disclosed here. If you own a QNAP
+NAS, you can easily extract it yourself is you have shell access via SSH or the
+serial console.
