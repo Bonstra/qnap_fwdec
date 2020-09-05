@@ -1,5 +1,6 @@
 [package]
 name = "qnap_fwdec"
+description = "QNAP firmware image encryption/decryption tool"
 version = "0.1.0"
 authors = ["Hugo Grostabussiat <bonstra@bonstra.fr.eu.org>"]
 license = "GPL-3.0-or-later"
