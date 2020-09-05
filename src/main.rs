@@ -299,12 +299,9 @@ fn decrypt(params: &DecParams) -> io::Result<()> {
     };
 
     let footer = try!(read_footer(&mut reader));
-    println!("Model name: {}\n\
-             FW version: {}\n\
-             FW date: {}",
-             footer.modelname,
-             footer.fwver,
-             footer.fwdate);
+    println!("Model name: {}", footer.modelname);
+    println!("FW version: {}", footer.fwver);
+    println!("FW date: {}", footer.fwdate);
 
     let blobsize = params.blobsize.unwrap_or(footer.blobsize);
     let mut ctx = CryptoContext::new(&params.key);
