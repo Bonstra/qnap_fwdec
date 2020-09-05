@@ -7,6 +7,7 @@ license = "GPL-3.0-or-later"
 readme = "README"
 categories = ["command-line-utilities", "cryptography"]
 keywords = ["qnap", "nas", "encryption", "decryption", "firmware", "tool"]
+repository = "https://github.com/Bonstra/qnap_fwdec"
 
 [dependencies]
 getopts = "0.2"
